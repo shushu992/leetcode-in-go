@@ -1,15 +1,15 @@
-package leetcode_in_go
+package maximum_depth_of_binary_tree
 
 import "testing"
 
-func TestMaximunDepthOfBinaryTree1(t *testing.T) {
+func TestMaximumDepthOfBinaryTree1(t *testing.T) {
 	result := maxDepth(nil)
 	want := 0
 
 	assertDepth(t, result, want)
 }
 
-func TestMaximunDepthOfBinaryTree2(t *testing.T) {
+func TestMaximumDepthOfBinaryTree2(t *testing.T) {
 	node := &TreeNode{
 		1,
 		nil,
@@ -22,7 +22,7 @@ func TestMaximunDepthOfBinaryTree2(t *testing.T) {
 	assertDepth(t, result, want)
 }
 
-func TestMaximunDepthOfBinaryTree3(t *testing.T) {
+func TestMaximumDepthOfBinaryTree3(t *testing.T) {
 	node := &TreeNode{
 		3,
 		&TreeNode{
@@ -51,7 +51,7 @@ func TestMaximunDepthOfBinaryTree3(t *testing.T) {
 	assertDepth(t, result, want)
 }
 
-func TestMaximunDepthOfBinaryTree4(t *testing.T) {
+func TestMaximumDepthOfBinaryTree4(t *testing.T) {
 	node := &TreeNode{
 		1,
 		nil,

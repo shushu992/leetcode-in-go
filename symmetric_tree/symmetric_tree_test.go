@@ -1,4 +1,4 @@
-package leetcode_in_go
+package symmetric_tree
 
 import "testing"
 

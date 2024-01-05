@@ -1,4 +1,10 @@
-package leetcode_in_go
+package symmetric_tree
+
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
 
 /**
  * https://leetcode.com/problems/symmetric-tree/

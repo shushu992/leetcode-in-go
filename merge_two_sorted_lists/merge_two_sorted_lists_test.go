@@ -1,4 +1,4 @@
-package leetcode_in_go
+package merge_two_sorted_lists
 
 import (
 	"testing"
