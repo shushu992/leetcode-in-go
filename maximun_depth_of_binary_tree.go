@@ -1,11 +1,5 @@
 package leetcode_in_go
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 /*
  * https://leetcode.com/problems/maximum-depth-of-binary-tree/
  *
