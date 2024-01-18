@@ -12,38 +12,22 @@ func containsDuplicate(nums []int) bool {
     for _, num := range nums {
         num += 1 << 30
 
-        num1 := (num >> 24) % (1 << 8)
-        num2 := (num >> 16) % (1 << 8)
-        num3 := (num >> 8) % (1 << 8)
-        num4 := (num >> 0) % (1 << 8)
+        node := root
+        for i := 0; i < 8; i++ {
+            n := num % (1 << 4)
 
-        if root[num1] == nil {
-            root[num1] = &Node{}
+            if node[n] == nil {
+                node[n] = &Node{}
+            } else if i == 7 {
+                return true
+            }
+
+            node = node[n]
+            num >>= 4
         }
-
-        node1 := root[num1]
-
-        if node1[num2] == nil {
-            node1[num2] = &Node{}
-        }
-
-        node2 := node1[num2]
-
-        if node2[num3] == nil {
-            node2[num3] = &Node{}
-        }
-
-        node3 := node2[num3]
-
-        if node3[num4] == nil {
-            node3[num4] = &Node{}
-            continue
-        }
-
-        return true
     }
 
     return false
 }
 
-type Node [256]*Node
+type Node [16]*Node
